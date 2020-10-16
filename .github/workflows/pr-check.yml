@@ -53,7 +53,7 @@ jobs:
         ref: '${{github.event.pull_request.head.ref}}'
         repository: '${{github.event.pull_request.head.repo.full_name}}'
     - name: remove uneeded files
-      run: rm -v !(testcafe)
+      run: rm package.json
     - name: Download base artifact
       uses: actions/download-artifact@v1
       with:
